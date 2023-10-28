@@ -1,19 +1,18 @@
-package com.kunal.singleton;
+package com.kunal.access;
 
-import com.kunal.access.A;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Singleton obj1 = Singleton.getInstance();
+        A obj = new A(10, "Kunal");
+        // need to do a few things
+        // 1. access the data members
+        // 2. modify the data members
 
-        Singleton obj2 = Singleton.getInstance();
+//        ArrayList<Integer> list = new ArrayList<>(23);
+//        list.DEFAULT_CAPACITY;
 
-        Singleton obj3 = Singleton.getInstance();
-
-        // all 3 ref variables are pointing to just one object
-
-        A a = new A(10, "Kunal");
-        a.getNum();
-//        int n = a.num;
+        obj.getNum();
+        int n = obj.num;
     }
 }
