@@ -1,16 +1,13 @@
-package com.kunal.abstractDemo;
+package com.kunal.interfaces.extendDemo;
 
-public class Main {
-    public static void main(String[] args) {
-        Son son = new Son(30);
-        son.career();
+public class Main implements B{
+    @Override
+    public void fun() {
 
-        son.normal();
+    }
 
-        Parent daughter = new Daughter(28);
-        daughter.career();
+    @Override
+    public void greet() {
 
-        Parent.hello();
-//        Parent mom = new Parent(45);
     }
 }
