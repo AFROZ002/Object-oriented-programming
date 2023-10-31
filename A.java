@@ -1,13 +1,15 @@
-package com.kunal.interfaces.extendDemo2;
+package com.kunal.interfaces.nested;
 
-public interface A {
-    // static interface methods should always have a body
-    // call via the interface name
-    static void greeting() {
-        System.out.println("Hey I am static method");
+public class A {
+    // nested interface
+    public interface NestedInterface {
+        boolean isOdd(int num);
     }
+}
 
-    default void fun() {
-        System.out.println("I am in A");
+class B implements A.NestedInterface {
+    @Override
+    public boolean isOdd(int num) {
+        return (num & 1) == 1;
     }
 }

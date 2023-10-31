@@ -1,13 +1,8 @@
-package com.kunal.interfaces.extendDemo2;
+package com.kunal.interfaces.nested;
 
-public class Main implements A, B {
-    @Override
-    public void greet() {
-
-    }
-
+public class Main {
     public static void main(String[] args) {
-        Main obj = new Main();
-        A.greeting();
+        B obj = new B();
+        System.out.println(obj.isOdd(6));
     }
 }
